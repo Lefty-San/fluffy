@@ -27,9 +27,18 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+#JavaScript environment
+gem "therubyracer"
+
+gem 'net-ssh', '~>2.7.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'capistrano', "~> 2.14.2"
 end
 
 # Use ActiveModel has_secure_password

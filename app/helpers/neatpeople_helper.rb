@@ -1,0 +1,2 @@
+module NeatpeopleHelper
+end
