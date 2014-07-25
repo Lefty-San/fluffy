@@ -48,8 +48,13 @@ body div.hero_banner {
 .dev_next p {
 	width:80%;
 	margin:0 auto;
+	background:url(/assets/textWhite.png);
 }
 
 p.dev_space {
 	min-height:300px;
+}
+
+.dev_next p span {
+	padding-top:1em;
 }
