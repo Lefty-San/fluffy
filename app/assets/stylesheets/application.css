@@ -65,3 +65,22 @@
 .headerTab td {
 	padding-top:1em;
 }
+
+.fuwaFooter {
+	/*position: absolute;
+	bottom: 0;*/
+	width: 100%;
+}
+.leftFooter, .rightFooter {
+	display: inline-block;
+	width:48.9%;
+}
+
+.fuwaHeader span a {
+	background: url(/assets/leftyLogo.png) no-repeat;
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	cursor: pointer;
+	background-size: 100%;
+}

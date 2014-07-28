@@ -1,9 +1,10 @@
 Moku::Application.routes.draw do
+  get "aboutme/index"
   get "neatpeople/index"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  resources :aboutme
   resources :articles
   resources :neatpeople
   # You can have the root of your site routed with "root"

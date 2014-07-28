@@ -5,22 +5,35 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name=viewport content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="fuwaHeader">
 	<!-- My Cute Fluffy Header to go here -->
-	<span>Home</span>
+	<span><a href="/"></a></span>
 	<table class="headerTab">
 		<tbody>
 			<tr>
 				<td>Site Links</td>
 				<td>Gallery</td>
-				<td>About Me</td>
+				<td><a href="aboutme">About Me</a></td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 <%= yield %>
 	<!-- my cute fluffy footer to go here -->
+	<div class="fuwaFooter">
+		<div class="leftFooter">
+			<div class="summaryFooter">
+				Hi hi, just a few words to say down here
+			</div>
+		</div>
+		<div class="rightFooter">
+			<div>
+				a few links to the internet.				
+			</div>			
+		</div>
+	</div>
 </body>
 </html>
