@@ -85,45 +85,40 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
 	/* Styles */
 	.hero_banner h3 {
-	margin: 0 auto;
-	display: table;
-	margin-top:-1em;
-	padding-top:75px;
-	font-size:1.7em;
-}
+		margin: 0 auto;
+		display: table;
+		margin-top:-1em;
+		padding-top:75px;
+		font-size:1.7em;
+	}
 
-body div.hero_banner {
-	width:100%;
-	height:450px;
-	/*background: url(/assets/orangeBack.png);*/
-	background: url(/assets/whiteMiku.png) no-repeat top left; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin-top:1em;	
-}
-.dev_separator1 {
-	width:100%;
-	height:350px;
-	/*background: url(/assets/greenBack.png);*/
-	background: url(/assets/asukaInSpace.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: cover;	
-}
-
-.dev_separator2 {
-	width:100%;
-	height:350px;
-	/*background: url(/assets/purpleBack.png);*/
-	background: url(/assets/stockin.jpg) no-repeat bottom left; 
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;	
-}
-
+	body div.hero_banner {
+		width:100%;
+		height:450px;
+		background: url(/assets/whiteMiku.png) no-repeat top left; 
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		margin-top:1em;	
+	}
+	.dev_separator1 {
+		width:100%;
+		height:350px;
+		background: url(/assets/asukaInSpace.jpg) no-repeat center center; 
+  		-webkit-background-size: cover;
+  		-moz-background-size: 100%;
+  		-o-background-size: 100%;
+  		background-size: cover;	
+	}
+	.dev_separator2 {
+		width:100%;
+		height:350px;
+		background: url(/assets/stockin.jpg) no-repeat bottom left; 
+  		-webkit-background-size: 100%;
+  		-moz-background-size: 100%;
+  		-o-background-size: 100%;
+  		background-size: 100%;	
+	}
 }
 
