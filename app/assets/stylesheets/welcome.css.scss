@@ -18,16 +18,21 @@ body div.hero_banner {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;	
+  background-size: cover;
+  margin-top:2em;	
 }
 
-.hero_banner h3, .about_banner h3 {
+.hero_banner h3 {
 	margin: 0 auto;
 	display: table;
 	margin-top:-1em;
 	padding-top:180px;
 	font-size:2em;
 }
+
+/*.about_banner h3 {
+	font-size:1.5em;
+}*/
 
 .dev_separator1 {
 	width:100%;

@@ -3,10 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.about_banner {
+body div.about_banner {
+	width:100%;
+	height:450px;
+	text-align: center;
+	margin-top:2em;
+}
+
+.about_banner h3 {
 	margin: 0 auto;
 	display: table;
-	margin-top:-1em;
 	padding-top:180px;
 	font-size:2em;
 }
