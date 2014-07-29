@@ -8,6 +8,11 @@ body div.about_banner {
 	height:450px;
 	text-align: center;
 	margin-top:2em;
+	background: url(/assets/asukaColors.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .about_banner h3 {
