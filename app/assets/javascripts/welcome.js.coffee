@@ -5,10 +5,7 @@
  heroSizer = function() {
 	var vPort = $( window ).height();
 	var hSize = $('.fuwaHeader').height();
-	// var content = $('.dev_next:nth-child(0)').height();
-	// console.log(content);
 	var hero = vPort-(hSize*4.5);
-	console.log(hero);
 	$('.hero_banner').css({
 		"height" : hero + "px"
 	});
