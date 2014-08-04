@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: url(/assets/mikuColor.png);
+	/*background: url(/assets/mikuColor.png);*/
+	background: url(/assets/asukaColors.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 p span {
