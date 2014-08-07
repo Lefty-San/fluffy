@@ -16,7 +16,6 @@
 //= require_tree .
 
 $('.mobileMenu').click(function() {
-	console.log($('table.headerTab').css('display'));
 	if ($('table.headerTab').hasClass('reveal')) {
 		$('table.headerTab').removeClass('reveal');
 	} else {

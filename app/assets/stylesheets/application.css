@@ -96,12 +96,13 @@ and (max-device-width : 480px) {
 
 	.mobileMenu {
 		display: inline-block;
-		width: 51px;
-		height: 51px;
+		width: 35px;
+		height: 35px;
 		cursor: pointer;
-		background: url(/assets/mobileMenu.png) no-repeat center center;
+		background: url(/assets/menu_Icon.png) no-repeat center center;
 		background-size: 100%;
-		margin-bottom: 1.15em;
+		margin-top: 0.5em;
+		margin-right: 0.5em;
 		float:right;
 	}
 
