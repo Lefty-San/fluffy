@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$('.mobileMenu').click(function() {
+	console.log($('table.headerTab').css('display'));
+	if ($('table.headerTab').hasClass('reveal')) {
+		$('table.headerTab').removeClass('reveal');
+	} else {
+		$('table.headerTab').addClass('reveal');
+	}
+});

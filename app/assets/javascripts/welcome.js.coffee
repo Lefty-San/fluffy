@@ -14,20 +14,10 @@
 
 $( document ).ready(function() {
 	heroSizer();
-	console.log('onload the width is ' + $('table.headerTab').width());
 });
 
 $( window ).resize(function() {
 	heroSizer();
-});
-
-$('.mobileMenu').click(function() {
-	console.log($('table.headerTab').css('display'));
-	if ($('table.headerTab').hasClass('reveal')) {
-		$('table.headerTab').removeClass('reveal');
-	} else {
-		$('table.headerTab').addClass('reveal');
-	}
 });
 
 `
