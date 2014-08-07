@@ -50,6 +50,9 @@
 	font-style: italic;
 }
 
+.reveal {
+	display: block !important;
+}
 
 .fuwaHeader {
 	width: 100%;
@@ -69,11 +72,11 @@
 	/*position: absolute;
 	bottom: 0;*/
 	width: 100%;
-	padding: 1em;
 }
 .leftFooter, .rightFooter {
 	display: inline-block;
 	width:48.9%;
+	padding:1em;
 }
 
 .fuwaHeader span a {
@@ -90,7 +93,44 @@
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
 	/* Styles */
+
+	.mobileMenu {
+		display: inline-block;
+		width: 51px;
+		height: 51px;
+		cursor: pointer;
+		background: url(/assets/mobileMenu.png) no-repeat center center;
+		background-size: 100%;
+		margin-bottom: 1.15em;
+		float:right;
+	}
+
+	table.headerTab {
+		position: absolute;
+		top: 3.35em;
+		text-align: center;
+		background: lightgrey;
+		float:right;
+		display:none;
+		right:0;
+	}
 	.headerTab {
-		width:70%;
+		width:50%;
+	}
+	.headerTab td {
+		display: block;
+	}
+	.leftFooter, .rightFooter {
+		display: inline-block;
+		width:40%;
+		padding:1em;
+		float:left;
+	}
+	.rightFooter td {
+		padding-bottom:1em;
+	}
+	.fuwaHeader span a {
+		width: 75px;
+		height: 70px;
 	}
 }
