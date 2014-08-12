@@ -1,3 +1,57 @@
 // Place all the styles related to the neatpeople controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Begin Sam Moritz Styles */
+.sammyBan {
+	background: url(/assets/brainSplosion.png) no-repeat top;
+	background-size: 100%;
+	background-attachment: fixed;
+	width:100%;
+	height: 450px;
+	min-height: 300px;
+	text-align: center;
+	color: #f26e3a;
+}
+
+.sammyBan b  {
+	font-size:1.3em;
+	color: #FFF;
+}
+
+sup {
+	color: #f26e3a;
+}
+
+.samGallery {
+	width:90%;
+	margin: 0 auto;
+	padding-bottom: 1em;
+}
+
+.samGallery div {
+	display: inline-block;
+	width: 30%;
+	border-radius: 15px;
+	border: 1px solid #f26e3a;
+	padding: 1em;
+	text-align: center;
+	height: 9em;
+
+}
+
+.samGallery div span {
+	/*figure this out*/
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	/* Styles */
+	.samGallery div {
+		display: block;
+		width:90%;
+	}
+}

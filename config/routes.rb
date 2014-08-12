@@ -1,10 +1,13 @@
 Moku::Application.routes.draw do
+  get "links/index"
   get "login/index", constraints: {subdomain: 'login'}
   get "aboutme/index"
   get "neatpeople/index"
+  get "neatpeople/smoritz"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :links
   resources :aboutme
   resources :articles
   resources :neatpeople

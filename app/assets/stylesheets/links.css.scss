@@ -1,0 +1,38 @@
+// Place all the styles related to the links controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.linkBan {
+	width: 100%;
+	height: 450px;
+	min-height: 300px;
+	text-align: center;
+}
+
+.linkBan h3 {
+	padding-top: 180px;
+}
+
+.contentContainer {
+	width:80%;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.siteContainer {
+	width:31%;
+	display: inline-block;
+	border-radius: 15px;
+	border: 1px solid #FFF;
+}
+
+.siteContainer span {
+	display: block;
+	text-align: center;
+}
+
+.siteContainer a {
+	display: block;
+	padding: 1em;
+}
