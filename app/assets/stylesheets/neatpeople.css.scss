@@ -121,6 +121,34 @@ sup {
 	width: 1024px;
 	/*height:30em;*/
 	margin:0 auto;
+	overflow: hidden;
+}
+
+.sliderMark {
+	position: relative;
+	z-index:10;
+	left: 800px;
+}
+
+span.mark.active {
+	-webkit-box-shadow: inset 7px -6px 15px -9px black;
+	-moz-box-shadow: inset 7px -6px 15px -9px black;
+	box-shadow: inset 7px -6px 15px -9px black;
+}
+
+span.mark {
+	cursor: pointer;
+}
+
+.sliderCell {
+	position: relative;
+	/*top: 243px;*/
+	min-height: 300px;
+	width: 1024px;
+}
+
+.sliderCell.one, .sliderCell.two {
+	left:1024px;
 }
 
 .clubSections {

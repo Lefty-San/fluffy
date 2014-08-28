@@ -9,10 +9,13 @@ clubSizer = function() {
 	var hSize = $('.clubNav').height();
 	var hero = vPort - (hSize*4.5 + tSize);
 	var h = window.innerHeight;
-	console.log(h);
+	// console.log(h);
 	// console.log( 'viewPort =  ' + vPort + '\r\n titleSize =  ' + tSize + '\r\n navSize =  ' + hSize + '\r\n heroSize =  ' + hero);
-	$('.clubSlider').css({
+	$('.clubSlider, .sliderCell').css({
 		"height" : hero + "px"
+	});
+	$( '.sliderMark' ).css({
+		"top" : hero - 60 + "px"
 	});
 }
 
@@ -23,6 +26,8 @@ $( document ).ready(function() {
 		"height": h + "px"
 	});
 	clubSizer();
+	var s = $( '.clubSlider' ).offset().top;
+    console.log(s);
 });
 
 $( window ).resize(function() {
