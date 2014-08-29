@@ -26,8 +26,18 @@ $( document ).ready(function() {
 		"height": h + "px"
 	});
 	clubSizer();
-	var s = $( '.clubSlider' ).offset().top;
-    console.log(s);
+	
+$(".clubSlider > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('.clubSlider > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('.clubSlider');
+},  9000);
+
 });
 
 $( window ).resize(function() {

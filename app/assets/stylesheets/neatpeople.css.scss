@@ -141,14 +141,14 @@ span.mark {
 }
 
 .sliderCell {
-	position: relative;
-	/*top: 243px;*/
+	position: absolute;
+	top: 243px;
 	min-height: 300px;
 	width: 1024px;
 }
 
 .sliderCell.one, .sliderCell.two {
-	left:1024px;
+	/*left:1024px;*/
 }
 
 .clubSections {
