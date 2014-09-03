@@ -43,27 +43,28 @@ $( window ).resize(function() {
 	clubSizer();
 });
 
-<<<<<<< HEAD
-=======
-
-var kkeys = [], konami = "87,72,73,84,69";
+var kkeys = [], dog = "68,79,71", mwac = "77,87,65,67" ;
 
 $(document).keydown(function(e) {
 
   kkeys.push( e.keyCode );
+  console.log(e.keyCode);
 
-  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+  if ( kkeys.toString().indexOf( mwac ) >= 0 ) {
     $(document).unbind('keydown',arguments.callee);
     
+    window.location = './mwac';
     // do something awesome
+    /*
     $("body").css({
     	"background": "#FFF"
-    });
+    }); */
   
+  }
+  else if ( kkeys.toString().indexOf( dog ) >= 0 ) {
+  	window.location = './dogclub';
   }
 
 });
 
-
->>>>>>> a5ce906ada13d946e900ae3cad49d0b2796d36d6
 `
