@@ -54,8 +54,29 @@ sup {
 	margin: 0 auto;
 }
 
+.clubNav span a:hover {
+	cursor: pointer;
+	animation: fill 0.7s linear forwards;
+	-webkit-animation: fill 0.7s linear forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fill {
+    from {background: transparent; border-radius: 15px; -webkit-border-radius:15px;}
+    to {background: #e44d26; border-radius: 0px; -webkit-border-radius: 0px;}
+}
+
+/* Standard syntax */
+@keyframes fill {
+    from {background: transparent; border-radius: 15px; -webkit-border-radius: 0px;}
+    to {background: #e44d26; border-radius: 0px; -webkit-border-radius: 0px;}
+}
+
+
 .clubNav a {
 	text-decoration: none;
+	color: #222;
+	padding: 1em;
 }
 
 .clubMobileSwitch {
@@ -63,13 +84,13 @@ sup {
 }
 
 .clubNavItem.active {
-	background: #dc5849;
-	color: #FFF;
-	padding: 0.7em;
+	/*background: #dc5849;*/
+	/*color: #FFF;*/
+	/*padding: 0.7em;*/
 }
 
 .clubNavItem {
-	padding: 1.75em;
+	/*padding: 1.75em;*/
 }
 
 .clubNavSpace {
@@ -294,4 +315,7 @@ and (max-device-width : 480px) {
 		color: #f26e3a;
 		margin-top: -0.73em;
 	}
+
+
+
 }
