@@ -43,4 +43,27 @@ $( window ).resize(function() {
 	clubSizer();
 });
 
+<<<<<<< HEAD
+=======
+
+var kkeys = [], konami = "87,72,73,84,69";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    $("body").css({
+    	"background": "#FFF"
+    });
+  
+  }
+
+});
+
+
+>>>>>>> a5ce906ada13d946e900ae3cad49d0b2796d36d6
 `

@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require_tree .
- */
+ */ /*
 @font-face {
 	font-family: myMeiryo;
 	src: url(/assets/meiryo.ttf) format('truetype');
@@ -27,25 +27,26 @@
 	font-family: myBoldItalic;
 	src: url(/assets/meiryoBoldItalic.ttf) format('truetype');
 }
-
+*/
 * {
-	font-family: myMeiryo, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/*font-family: myMeiryo, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	padding: 0;
 	margin: 0;
 }
 
 .bold {
-	font-family: myBold;
+	/*font-family: myBold;*/
 	font-weight: 700;
 }
 
 .italic {
-	font-family: myItalic;
+	/*font-family: myItalic;*/
 	font-style: italic;
 }
 
 .boldItalic {
-	font-family: myBoldItalic;
+	/*font-family: myBoldItalic;*/
 	font-weight: 700;
 	font-style: italic;
 }
