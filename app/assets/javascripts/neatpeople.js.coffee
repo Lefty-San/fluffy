@@ -45,4 +45,23 @@ $( window ).resize(function() {
 });
 
 
+var kkeys = [], konami = "87,72,73,84,69";
+
+$(document).keydown(function(e) {
+
+  kkeys.push( e.keyCode );
+
+  if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+    $(document).unbind('keydown',arguments.callee);
+    
+    // do something awesome
+    $("body").css({
+    	"background": "#FFF"
+    });
+  
+  }
+
+});
+
+
 `
