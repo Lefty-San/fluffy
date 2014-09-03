@@ -272,7 +272,8 @@ span.mark {
 
 .bottomCell b {
 	margin-left: 1.25em;
-	font-family: myBold;
+	/*font-family: myBold;*/
+	font-weight: 700;
 	font-size:1.2em;
 }
 
@@ -284,7 +285,8 @@ span.mark {
 
 .bottomCell p span {
 	color: red;
-	font-family: myItalic;
+	font-style: italic;
+	/*font-family: myItalic;*/
 }
 
 .clubFooter {
