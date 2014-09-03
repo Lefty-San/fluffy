@@ -19,7 +19,6 @@ clubSizer = function() {
 	});
 }
 
-
 $( document ).ready(function() {
 	var h = window.innerHeight;
 	$( 'body' ).css({
@@ -43,6 +42,5 @@ setInterval(function() {
 $( window ).resize(function() {
 	clubSizer();
 });
-
 
 `
