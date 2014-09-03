@@ -78,9 +78,14 @@ sup {
 }
 
 .clubTitle {
+	position:relative;
 	width: 1024px;
 	margin: 0 auto;
+	margin-bottom: 1em;
 	background: #FFF;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 }
 .clubLeft, .clubRight {
 	width: 500px;
@@ -116,12 +121,53 @@ sup {
 }
 
 .clubSlider {
-	background: #ccc8be;
+	position:relative;
+	/*background: #ccc8be;*/
+	background: #FFF;
 	min-height:300px;
 	width: 1024px;
 	/*height:30em;*/
 	margin:0 auto;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.paperEdge {
+	position:relative;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.paperEdge:before, .paperEdge:after {
+	position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+	bottom: 18px;
+	background: transparent;
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	-moz-transform: skew(-5deg) rotate(-5deg);
+	-ms-transform: skew(-5deg) rotate(-5deg);
+	-o-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-5deg) rotate(-5deg);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	z-index: -1;
+}
+
+.paperEdge:after {
+	left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	-moz-transform: skew(5deg) rotate(5deg);
+	-ms-transform: skew(5deg) rotate(5deg);
+	-o-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
 }
 
 .sliderMark {
@@ -155,9 +201,11 @@ span.mark {
 	width:1024px;
 	margin:0 auto;
 	margin-top:5em;
+	background: #FFF;
 }
 
 .clubText {
+	position:relative;
 	display: inline-block;
 	border: 1px solid #ccc;
 	width: 255.55px;
@@ -186,7 +234,9 @@ span.mark {
 .clubBottom {
 	width:1024px;
 	margin:0 auto;
+	margin-bottom: 1em;
 	margin-top: 5em;
+	background: #FFF;
 }
 
 .bottomCell {
