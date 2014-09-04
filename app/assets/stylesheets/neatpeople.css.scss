@@ -320,6 +320,24 @@ and (max-device-width : 480px) {
 		margin-top: -0.73em;
 	}
 
+	/* dogClub */
+	.clubNav span {
+		display: none;
+	}
+	.title {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	.clubSlider {
+		width:100%;
+	}
+	body, .clubNav.clubTitle, .clubLeft, .clubRight, .clubSections, .clubBottom {
+		width: 100%;
+	}
+	.clubText, .clubLeft, .clubRight, .bottomCell {
+		display: block;
+	}
 }
 
 
