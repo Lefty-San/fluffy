@@ -84,13 +84,15 @@ sup {
 }
 
 .clubNavItem.active {
-	/*background: #dc5849;*/
+	background: rgb(158, 159, 160);
 	/*color: #FFF;*/
 	/*padding: 0.7em;*/
 }
 
 .clubNavItem {
 	/*padding: 1.75em;*/
+	background: rgb(125, 158, 255);
+	color: #FFF;
 }
 
 .clubNavSpace {
@@ -286,7 +288,7 @@ span.mark {
 }
 
 .bottomCell p span {
-	color: red;
+	/*color: red;*/
 	font-style: italic;
 	/*font-family: myItalic;*/
 }
@@ -321,6 +323,22 @@ and (max-device-width : 480px) {
 	}
 
 	/* dogClub */
+
+	.clubNav .clubMobileSwitch {
+		display: inline-block;
+	}
+	
+	.clubMobileSwitch {
+		display: inline-block;
+		padding: 0 1em 0 0;
+	}
+
+	.clubNav {
+		height: 2em;
+		text-align: right;
+		background: rgb(125, 158, 255);
+	}
+
 	.clubNav span {
 		display: none;
 	}
@@ -329,15 +347,50 @@ and (max-device-width : 480px) {
 		width: 100%;
 		overflow: hidden;
 	}
+	.clubLogo {
+		width: 320px;
+		background-size: 100%;
+	}
+	.clubRight {
+		background: #FFF;
+		margin-top: 1em;
+	}
+	.callSmall {
+		font-size: 1.3em;
+	}
+	.callLarge {
+		display: block;
+	}
+	.clubMobileSwitch.location {
+		display: block;
+	}
 	.clubSlider {
 		width:100%;
+		margin-top:15em;
+		margin-bottom: 2em;
+		background: rgb(125, 158, 255);
 	}
-	body, .clubNav.clubTitle, .clubLeft, .clubRight, .clubSections, .clubBottom {
-		width: 100%;
+	.sliderCell, .bottomCell {
+		width:320px;
+	}
+	 .clubNav, .clubTitle, .clubLeft, .clubRight, .clubSections, .clubBottom, .clubFooter {
+		width: 320px !important;
+		display: block;
+		margin: 0 auto;
 	}
 	.clubText, .clubLeft, .clubRight, .bottomCell {
 		display: block;
+		margin-bottom:2em;
 	}
+	.clubBottom {
+		background: transparent;
+	}
+	.bottomCell {
+		margin-bottom: 2em;
+		background: #FFF;
+	}
+
+
 }
 
 
