@@ -64,13 +64,13 @@ sup {
 /* Chrome, Safari, Opera */
 @-webkit-keyframes fill {
     from {background: transparent; border-radius: 15px; -webkit-border-radius:15px;}
-    to {background: #e44d26; border-radius: 0px; -webkit-border-radius: 0px;}
+    to {background: rgb(158, 159, 160); border-radius: 0px; -webkit-border-radius: 0px;}
 }
 
 /* Standard syntax */
 @keyframes fill {
     from {background: transparent; border-radius: 15px; -webkit-border-radius: 0px;}
-    to {background: #e44d26; border-radius: 0px; -webkit-border-radius: 0px;}
+    to {background: rgb(158, 159, 160); border-radius: 0px; -webkit-border-radius: 0px;}
 }
 
 
@@ -84,7 +84,7 @@ sup {
 	display: none;
 }
 
-.clubNavItem.active {
+.clubNav span.active a {
 	background: rgb(158, 159, 160);
 	/*color: #FFF;*/
 	/*padding: 0.7em;*/
@@ -197,9 +197,9 @@ sup {
 }
 
 .sliderMark {
-	position: relative;
+	position: absolute;
 	z-index:10;
-	left: 800px;
+	right: 25%;
 }
 
 span.mark.active {
