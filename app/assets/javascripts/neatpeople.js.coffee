@@ -28,9 +28,11 @@ clubSizer = function() {
 
 slideShow = function() { 
   $('.clubSlider > div:first')
-    .fadeOut(1000)
+  .removeClass('active')
+    .fadeOut(1000)   
     .next()
     .fadeIn(1000)
+    .addClass('active')
     .end()
     .appendTo('.clubSlider');
 }
@@ -68,15 +70,49 @@ $( window ).resize(function() {
 $( '.mark.one' ).click(function() {
 	clearInterval(startShow);
 	// $(".clubSlider > div:gt(0)").hide();
-	$( ".clubSlider.one, .clubSlider.two" ).fadeOut(1000)
-	.appendTo('.clubslider');
-	$('.clubSlider.zero').fadeIn(1000)
+	$( ".sliderCell.one, .sliderCell.two" ).fadeOut(1000)
+	// .appendTo('.clubSlider');
+	// $('.sliderCell.zero').fadeIn(1000)
+    // .fadeOut(1000)
+    // .next()
+    // .fadeIn(1000)
+    // .end()
+    // .appendTo('.clubSlider');
+    setTimeout(function(){
+    // $('.sliderCell.zero').fadeOut(1000);
+	startShow = setInterval( slideShow, 5000 )}, 2000);
+
+});
+
+$( '.mark.two' ).click(function() {
+	clearInterval(startShow);
+	// $(".clubSlider > div:gt(0)").hide();
+	$( ".sliderCell.zero, .sliderCell.two" ).fadeOut(1000)
+	// .appendTo('.clubSlider');
+	$('.sliderCell.one').fadeIn(1000)
     // .fadeOut(1000)
     // .next()
     // .fadeIn(1000)
     // .end()
     .appendTo('.clubSlider');
-	// startShow = setInterval( slideShow, 5000 );
+    setTimeout(
+	startShow = setInterval( slideShow, 5000 ), 2000);
+
+});
+
+$( '.mark.three' ).click(function() {
+	clearInterval(startShow);
+	// $(".clubSlider > div:gt(0)").hide();
+	$( ".sliderCell.one, .sliderCell.zero" ).fadeOut(1000)
+	// .appendTo('.clubSlider');
+	$('.sliderCell.two').fadeIn(1000)
+    // .fadeOut(1000)
+    // .next()
+    // .fadeIn(1000)
+    // .end()
+    .appendTo('.clubSlider');
+    setTimeout(
+	startShow = setInterval( slideShow, 5000 ), 2000);
 
 });
 
@@ -107,5 +143,22 @@ $(document).keydown(function(e) {
   }
 
 });
+
+/*
+
+<!--[if gte IE 8]>
+<script type = "text/javascript">
+$(".sRremrk").hoverIntent(function() {
+       $("test", this).fadeTo(400, 1);
+    }, function() {
+       $("test", this).fadeTo(400, 0);
+    });
+</script>
+<![endif]-->
+
+*/
+
+
+
 
 `

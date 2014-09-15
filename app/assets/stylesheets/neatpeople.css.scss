@@ -121,9 +121,10 @@ sup {
 }
 
 .clubLogo {
-	background: url(/assets/dogClub.png);
+	background: url(/assets/animalClinicAlpha.png);
 	width: 380px;
 	height: 180px;
+    background-size:100%;
 }
 
 .clubRight {
@@ -214,7 +215,7 @@ span.mark {
 
 .sliderCell {
 	position: absolute;
-	top: 243px;
+	/*top: 243px;*/
 	min-height: 300px;
 	width: 1024px;
 }
