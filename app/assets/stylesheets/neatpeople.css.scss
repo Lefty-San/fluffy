@@ -197,6 +197,31 @@ sup {
 	transform: matrix(1,0.09,0,1,0,0);
 }
 
+.sliderContent {
+	width:49%;
+	height: 100%;
+}
+
+.blue {
+	background: blue;
+}
+
+.green {
+	background: green;
+}
+
+.yellow {
+	background: yellow;
+}
+
+.sliderContent.Left {
+	float:left;
+}
+
+.sliderContent.Right{
+	float: right;
+}
+
 .sliderMark {
 	position: absolute;
 	z-index:10;
@@ -286,7 +311,7 @@ span.mark {
 .bottomCell p {
 	width:85%;
 	margin: 0 auto;
-	margin-top:2em;
+	margin-top:1em;
 }
 
 .bottomCell p span {
@@ -598,7 +623,7 @@ article:before, article:after
     height: 10px;
     content: ' ';
     left: 12px;
-    bottom: 12px;
+    bottom: 19px;
     background: transparent;
     -webkit-transform: skew(-5deg) rotate(-5deg);
     -moz-transform: skew(-5deg) rotate(-5deg);
@@ -704,15 +729,19 @@ aside { position:relative;}
     }
 
     nav {
-        float: right;
+        float: left;
         /*width: 38%;*/
         /*width:75%;*/
         min-width: 553px;
         max-height: 70px;
     }
-
+    header nav ul li {
+    	display: inline-block;
+    	margin: 0 99px 0 0;
+    }
     nav a {
-        max-width: 112px;
+        /*max-width: 112px;*/
+        width:100%;
         padding: 10px 1%;
         margin: 21px 1.7%;
     }
@@ -721,9 +750,14 @@ aside { position:relative;}
     WIDE: Main
    ============ */
 
+   
+
     .main article {
         float: left;
-        width: 57%;
+        /*width: 57%;*/
+        width:32.3%;
+        min-height:330px;
+        /*margin: 0.7em;*/
         position:relative;
         background: #FFF;
         padding:0.3em;
@@ -732,6 +766,18 @@ aside { position:relative;}
         -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
     }
+
+    div.main .picture-scroll {
+   	width:100%;
+   	display: block;
+   	margin: 0 auto;
+   	margin: 0 0 1em 0;
+   }
+
+    .main article:gt(0) {
+    	width:30%;
+    	margin:1em;
+    } 
 
     .main aside {
         float: right;

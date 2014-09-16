@@ -37,7 +37,18 @@ slideShow = function() {
     .appendTo('.clubSlider');
 }
 
-var startShow;
+otherShow = function() {
+	$('.picture-scroll > section:first')
+  .removeClass('active')
+    .fadeOut(1000)   
+    .next()
+    .fadeIn(1000)
+    .addClass('active')
+    .end()
+    .appendTo('.picture-scroll');
+}
+
+var startShow, mwacShow;
 
 /*
  * This function calls all the placement when the dom is ready also sets the first slideshow
@@ -52,6 +63,7 @@ $( document ).ready(function() {
 	
 $(".clubSlider > div:gt(0)").hide();
 	startShow = setInterval( slideShow, 5000 );
+	mwacShow = setInterval( otherShow, 5000)
 });
 
 /*
@@ -69,50 +81,38 @@ $( window ).resize(function() {
 
 $( '.mark.one' ).click(function() {
 	clearInterval(startShow);
-	// $(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.one, .sliderCell.two" ).fadeOut(1000)
-	// .appendTo('.clubSlider');
-	// $('.sliderCell.zero').fadeIn(1000)
-    // .fadeOut(1000)
-    // .next()
-    // .fadeIn(1000)
-    // .end()
-    // .appendTo('.clubSlider');
+	$(".clubSlider > div:gt(0)").hide();
+	$( ".sliderCell.one, .sliderCell.two" ).fadeOut(1000);
+	$('.sliderCell.zero').fadeIn(1000);
     setTimeout(function(){
-    // $('.sliderCell.zero').fadeOut(1000);
 	startShow = setInterval( slideShow, 5000 )}, 2000);
+    setTimeout(function() {
+    	$('.sliderCell.zero').fadeOut(1000);
+    }, 5000);
 
 });
-
 $( '.mark.two' ).click(function() {
 	clearInterval(startShow);
-	// $(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.zero, .sliderCell.two" ).fadeOut(1000)
-	// .appendTo('.clubSlider');
-	$('.sliderCell.one').fadeIn(1000)
-    // .fadeOut(1000)
-    // .next()
-    // .fadeIn(1000)
-    // .end()
-    .appendTo('.clubSlider');
-    setTimeout(
-	startShow = setInterval( slideShow, 5000 ), 2000);
+	$(".clubSlider > div:gt(0)").hide();
+	$( ".sliderCell.two, .sliderCell.zero" ).fadeOut(1000);
+	$('.sliderCell.one').fadeIn(1000);
+    setTimeout(function(){
+	startShow = setInterval( slideShow, 5000 )}, 2000);
+    setTimeout(function() {
+    	$('.sliderCell.one').fadeOut(1000);
+    }, 5000);
 
 });
-
 $( '.mark.three' ).click(function() {
 	clearInterval(startShow);
-	// $(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.one, .sliderCell.zero" ).fadeOut(1000)
-	// .appendTo('.clubSlider');
-	$('.sliderCell.two').fadeIn(1000)
-    // .fadeOut(1000)
-    // .next()
-    // .fadeIn(1000)
-    // .end()
-    .appendTo('.clubSlider');
-    setTimeout(
-	startShow = setInterval( slideShow, 5000 ), 2000);
+	$(".clubSlider > div:gt(0)").hide();
+	$( ".sliderCell.one, .sliderCell.zero" ).fadeOut(1000);
+	$('.sliderCell.two').fadeIn(1000);
+    setTimeout(function(){
+	startShow = setInterval( slideShow, 5000 )}, 2000);
+    setTimeout(function() {
+    	$('.sliderCell.two').fadeOut(1000);
+    }, 5000);
 
 });
 
