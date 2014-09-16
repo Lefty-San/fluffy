@@ -495,11 +495,11 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Blue Theme
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #ccc9de;
+    border-bottom: 10px solid #A2B5FE;
 }
 
 .footer-container,
@@ -510,8 +510,9 @@ body {
 .header-container,
 .footer-container,
 .main aside {
-    background: #ccc8be;
+    background: #6B88FF;
     color: #222;
+
 }
 
 .title {
@@ -534,10 +535,8 @@ nav a {
 
     text-align: center;
     text-decoration: none;
-    font-weight: bold;
-
-    color: #222;
-    /*background: #e44d26;*/
+    font-weight: normal;
+    color:#ccc;
     background: transparent;
 }
 
@@ -563,6 +562,11 @@ nav a:hover {
 
 .main article h1 {
     font-size: 2em;
+}
+.main article header {
+    font-size: 1em;
+    font-family: "Times New Roman";
+    font-style: italic;
 }
 
 .main aside {
@@ -590,10 +594,15 @@ nav a:hover {
 
 
 .mwac-logo {
-    background: url(./img/MWAClogo.jpg) no-repeat center;
+    background: url(./img/animalClinicAlpha.jpg) no-repeat center;
     background-size: 100%;
     width: 474px;
     height: 256px;
+}
+
+.logo img {
+    float:right;
+    margin: 0 170px 0 0;
 }
 
 /*
@@ -616,7 +625,7 @@ nav a:hover {
 
 
 
-article:before, article:after
+.page:before, .page:after
 {
     position: absolute;
     width: 40%;
@@ -634,7 +643,28 @@ article:before, article:after
     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     z-index: -1;
+}
+
+.info.page:before, .info.page:after
+{
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    content: ' ';
+    left: 12px;
+    bottom: 5px;
+    background: transparent;
+    -webkit-transform: skew(-5deg) rotate(-5deg);
+    -moz-transform: skew(-5deg) rotate(-5deg);
+    -ms-transform: skew(-5deg) rotate(-5deg);
+    -o-transform: skew(-5deg) rotate(-5deg);
+    transform: skew(-5deg) rotate(-5deg);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: -1;
 } 
+
 aside:before, aside:after
 {
     position: absolute;
@@ -655,7 +685,7 @@ aside:before, aside:after
     z-index: -1;
 } 
 
-article:after, aside:after
+.page:after ,article:after, aside:after, .info.page:after
 {
     left: auto;
     right: 12px;
@@ -736,8 +766,8 @@ aside { position:relative;}
         max-height: 70px;
     }
     header nav ul li {
-    	display: inline-block;
-    	margin: 0 99px 0 0;
+        display: inline-block;
+        margin: 0 75px 0 0;
     }
     nav a {
         /*max-width: 112px;*/
@@ -755,9 +785,9 @@ aside { position:relative;}
     .main article {
         float: left;
         /*width: 57%;*/
-        width:32.3%;
-        min-height:330px;
-        /*margin: 0.7em;*/
+        width:30%;
+        min-height:360px;
+        margin: 0.5em;
         position:relative;
         background: #FFF;
         padding:0.3em;
@@ -768,15 +798,30 @@ aside { position:relative;}
     }
 
     div.main .picture-scroll {
-   	width:100%;
-   	display: block;
-   	margin: 0 auto;
-   	margin: 0 0 1em 0;
+    width:96%;
+    display: block;
+    margin: 0 auto;
+    margin: 0 0 1em 0;
+    background: #6B88FE
    }
-
+   div article.logo {
+       float: left;
+     /*  width:40%; */
+   }
+   div article.slogan {
+       float: right;
+       width: 45%;
+   }
+   div article.slogan h3 {
+       color:#aaa;
+   }
+   div article.slogan p {
+       color:#000;
+       font-style: italic;
+   }
     .main article:gt(0) {
-    	width:30%;
-    	margin:1em;
+        width:30%;
+        margin:1em;
     } 
 
     .main aside {
