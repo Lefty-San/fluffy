@@ -76,7 +76,6 @@ sup {
 
 .clubNav a {
 	text-decoration: none;
-	color: #222;
 	padding: 1em;
 }
 
@@ -86,7 +85,7 @@ sup {
 
 .clubNav span.active a {
 	background: rgb(158, 159, 160);
-	/*color: #FFF;*/
+	color: #FFF;
 	/*padding: 0.7em;*/
 }
 
@@ -94,6 +93,7 @@ sup {
 	/*padding: 1.75em;*/
 	background: rgb(125, 158, 255);
 	color: #FFF;
+    margin: 30px;
 }
 
 .clubNavSpace {
