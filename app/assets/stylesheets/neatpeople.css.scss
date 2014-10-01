@@ -408,7 +408,7 @@ and (max-device-width : 480px) {
 		display: block;
 	}
 	.clubSlider {
-		width:100%;
+		width:90%;
 		margin-top:15em;
 		margin-bottom: 2em;
 		background: rgb(125, 158, 255);
@@ -436,6 +436,9 @@ and (max-device-width : 480px) {
         width:100%;
     }
     .sliderContent.Right {
+        display:none;
+    }
+    .sliderMark {
         display:none;
     }
 }
