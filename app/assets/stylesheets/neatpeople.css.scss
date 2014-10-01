@@ -155,10 +155,25 @@ sup {
 	width: 1024px;
 	/*height:30em;*/
 	margin:0 auto;
-	/*overflow: hidden;*/
+	overflow: hidden;
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.sliderCell {
+    display:block;
+    transition-duration: 2.5s;
+}
+
+.clubSlider .sliderCell.active {
+    right:0;
+    z-index:50;
+}
+
+.clubSlider .sliderCell.inactive {
+    right: -1050px;
+    transition-duration: 0;
 }
 
 .paperEdge {
@@ -220,11 +235,12 @@ sup {
 
 .sliderContent.Right{
 	float: right;
+    background: #FFF;
 }
 
 .sliderMark {
 	position: absolute;
-	z-index:10;
+	z-index:60;
 	right: 25%;
 }
 
@@ -416,8 +432,12 @@ and (max-device-width : 480px) {
 		margin-bottom: 2em;
 		background: #FFF;
 	}
-
-
+    .sliderContent {
+        width:100%;
+    }
+    .sliderContent.Right {
+        display:none;
+    }
 }
 
 

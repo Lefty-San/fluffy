@@ -26,16 +26,16 @@ clubSizer = function() {
  * This function is passed into interval declarations so the slideshow can be cleared and re instantiated as needed as a global function
  */
 
-slideShow = function() { 
-  $('.clubSlider > div:first')
-  .removeClass('active')
-    .fadeOut(1000)   
-    .next()
-    .fadeIn(1000)
-    .addClass('active')
-    .end()
-    .appendTo('.clubSlider');
-}
+// slideShow = function() { 
+//   $('.clubSlider > div:first')
+//   .removeClass('active')
+//     .fadeOut(1000)   
+//     .next()
+//     .fadeIn(1000)
+//     .addClass('active')
+//     .end()
+//     .appendTo('.clubSlider');
+// }
 
 otherShow = function() {
 	$('.picture-scroll > section:first')
@@ -48,7 +48,8 @@ otherShow = function() {
     .appendTo('.picture-scroll');
 }
 
-var startShow, mwacShow;
+var startShow, 
+    mwacShow;
 
 /*
  * This function calls all the placement when the dom is ready also sets the first slideshow
@@ -61,9 +62,9 @@ $( document ).ready(function() {
 	});
 	clubSizer();
 	
-$(".clubSlider > div:gt(0)").hide();
-	startShow = setInterval( slideShow, 5000 );
-	mwacShow = setInterval( otherShow, 5000)
+// $(".clubSlider > div:gt(0)").hide();
+// 	startShow = setInterval( slideShow, 5000 );
+// 	mwacShow = setInterval( otherShow, 5000)
 });
 
 /*
@@ -74,46 +75,109 @@ $( window ).resize(function() {
 	clubSizer();
 });
 
+/*
+ * Array for names of watermark clicks, those functions have all we need for the slideshow so we will just trigger those events on a timer instead of duplicating functions  
+ */
+var  mark = ['one', 'two', 'three'],
+      loc = 0;
+
+/*
+ * We will set a global function to be reused as a timer
+ */
+
+slideshow = function() {
+    var cell = mark[loc];
+    $('.mark.' + cell).click();
+    if (loc == 2) {
+      loc = 0;
+    } else {
+      loc++;
+    }
+}
+/*
+ * Start the first timer
+ */
+$(function() {
+  startShow = setInterval(function(){
+    slideshow();
+  },1000);
+});
 
 /*
  * These functions handles the timeout and restart of the slideshow on watermark click
  */
 
 $( '.mark.one' ).click(function() {
-	clearInterval(startShow);
-	$(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.one, .sliderCell.two" ).fadeOut(1000);
-	$('.sliderCell.zero').fadeIn(1000);
+  if ($('.sliderCell.zero').hasClass('active')) {
+    // do nothing
+  } else {
+    $('.sliderCell.one, .sliderCell.two').css({
+      "z-index":"20"
+    });
+     $('.sliderCell.zero').css({
+      "z-index":"50"
+    });
+    $('.sliderCell.zero, .mark.one').addClass('active');
+    $('.mark.two, .mark.three').removeClass('active');
+    $('.sliderCell.zero').removeClass('inactive');
     setTimeout(function(){
-	startShow = setInterval( slideShow, 5000 )}, 2000);
-    setTimeout(function() {
-    	$('.sliderCell.zero').fadeOut(1000);
-    }, 5000);
-
+      $('.sliderCell.one, .sliderCell.two').addClass('inactive');
+      $('.sliderCell.one, .sliderCell.two').removeClass('active');
+    },2000);
+    clearInterval(startShow);
+    loc = 0;
+    startShow = setInterval(function(){
+    slideshow();
+  },9000);
+  }
 });
 $( '.mark.two' ).click(function() {
-	clearInterval(startShow);
-	$(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.two, .sliderCell.zero" ).fadeOut(1000);
-	$('.sliderCell.one').fadeIn(1000);
-    setTimeout(function(){
-	startShow = setInterval( slideShow, 5000 )}, 2000);
-    setTimeout(function() {
-    	$('.sliderCell.one').fadeOut(1000);
-    }, 5000);
-
+	if ($('.sliderCell.one').hasClass('active')) {
+    // do nothing
+  } else {
+      $('.sliderCell.zero, .sliderCell.two').css({
+        "z-index":"20"
+      });
+      $('.sliderCell.one').css({
+        "z-index":"50"
+      });
+      $('.sliderCell.one, .mark.two').addClass('active');
+      $('.mark.one, .mark.three').removeClass('active');
+      $('.sliderCell.one').removeClass('inactive');
+      setTimeout(function(){
+        $('.sliderCell.zero, .sliderCell.two').addClass('inactive');
+        $('.sliderCell.zero, .sliderCell.two').removeClass('active');
+      },2000);
+      clearInterval(startShow);
+        loc = 1;
+        startShow = setInterval(function(){
+        slideshow();
+      },9000);
+    }
 });
 $( '.mark.three' ).click(function() {
-	clearInterval(startShow);
-	$(".clubSlider > div:gt(0)").hide();
-	$( ".sliderCell.one, .sliderCell.zero" ).fadeOut(1000);
-	$('.sliderCell.two').fadeIn(1000);
+	if ($('.sliderCell.two').hasClass('active')) {
+    // do nothing
+  } else {
+    $('.sliderCell.zero, .sliderCell.one').css({
+      "z-index":"20"
+    });
+     $('.sliderCell.two').css({
+      "z-index":"50"
+    });
+    $('.sliderCell.two, .mark.three').addClass('active');
+    $('.mark.one, .mark.two').removeClass('active');
+    $('.sliderCell.two').removeClass('inactive');
     setTimeout(function(){
-	startShow = setInterval( slideShow, 5000 )}, 2000);
-    setTimeout(function() {
-    	$('.sliderCell.two').fadeOut(1000);
-    }, 5000);
-
+      $('.sliderCell.zero, .sliderCell.one').addClass('inactive');
+      $('.sliderCell.zero, .sliderCell.one').removeClass('active');
+    },2000);
+    clearInterval(startShow);
+    loc = 2;
+    startShow = setInterval(function(){
+    slideshow();
+  },9000);
+  }
 });
 
 /*
