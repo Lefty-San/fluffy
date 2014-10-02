@@ -79,11 +79,23 @@ $( window ).resize(function() {
  * Array for names of watermark clicks, those functions have all we need for the slideshow so we will just trigger those events on a timer instead of duplicating functions  
  */
 var  mark = ['one', 'two', 'three'],
-      loc = 0;
+      loc = 0,
+  picture = ['one', 'two', 'three'],
+      pic = 0;
 
 /*
  * We will set a global function to be reused as a timer
  */
+
+picshow = function() {
+  var frame = picture[pic];
+  $('.pic.' + frame).click();
+  if (pic == 2) {
+    pic = 0;
+  } else {
+   pic++; 
+  }
+}
 
 slideshow = function() {
     var cell = mark[loc];
@@ -102,6 +114,85 @@ $(function() {
     slideshow();
   },1000);
 });
+$(function() {
+  mwacShow = setInterval(function() {
+    picshow();
+  },1000);
+});
+
+$( '.pic.one' ).click(function() {
+  if ($('.picture.one').hasClass('active')) {
+    // do nothing
+  } else {
+    $('.picture.two, .picture.three').css({
+      "z-index":"20"
+    });
+     $('.picture.one').css({
+      "z-index":"50"
+    });
+    $('.picture.one, .pic.one').addClass('active');
+    $('.pic.two, .pic.three').removeClass('active');
+    $('.picture.one').removeClass('inactive');
+    setTimeout(function(){
+      $('.picture.two, .picture.three').addClass('inactive');
+      $('.picture.two, .picture.three').removeClass('active');
+    },2000);
+    clearInterval(mwacShow);
+    pic = 0;
+    mwacShow = setInterval(function(){
+    picshow();
+  },9000);
+  }
+});
+$( '.pic.two' ).click(function() {
+  if ($('.picture.two').hasClass('active')) {
+    // do nothing
+  } else {
+    $('.picture.one, .picture.three').css({
+      "z-index":"20"
+    });
+     $('.picture.two').css({
+      "z-index":"50"
+    });
+    $('.picture.two, .pic.two').addClass('active');
+    $('.pic.one, .pic.three').removeClass('active');
+    $('.picture.two').removeClass('inactive');
+    setTimeout(function(){
+      $('.picture.one, .picture.three').addClass('inactive');
+      $('.picture.one, .picture.three').removeClass('active');
+    },2000);
+    clearInterval(mwacShow);
+    pic = 1;
+    mwacShow = setInterval(function(){
+    picshow();
+  },9000);
+  }
+});
+$( '.pic.three' ).click(function() {
+  if ($('.picture.three').hasClass('active')) {
+    // do nothing
+  } else {
+    $('.picture.two, .picture.one').css({
+      "z-index":"20"
+    });
+     $('.picture.three').css({
+      "z-index":"50"
+    });
+    $('.picture.three, .pic.three').addClass('active');
+    $('.pic.two, .pic.one').removeClass('active');
+    $('.picture.three').removeClass('inactive');
+    setTimeout(function(){
+      $('.picture.two, .picture.one').addClass('inactive');
+      $('.picture.two, .picture.one').removeClass('active');
+    },2000);
+    clearInterval(mwacShow);
+    pic = 2;
+    mwacShow = setInterval(function(){
+    picshow();
+  },9000);
+  }
+});
+
 
 /*
  * These functions handles the timeout and restart of the slideshow on watermark click
