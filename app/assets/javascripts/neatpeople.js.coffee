@@ -114,11 +114,11 @@ $(function() {
     slideshow();
   },1000);
 });
-$(function() {
-  mwacShow = setInterval(function() {
-    picshow();
-  },1000);
-});
+// $(function() {
+//   mwacShow = setInterval(function() {
+//     picshow();
+//   },1000);
+// });
 
 $( '.pic.one' ).click(function() {
   if ($('.picture.one').hasClass('active')) {
