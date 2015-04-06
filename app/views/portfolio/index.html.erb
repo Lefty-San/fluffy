@@ -1,0 +1,36 @@
+<!-- h1>Portfolio#index</h1>
+<p>Find me in app/views/portfolio/index.html.erb</p -->
+<div class="portfolio layout_wrapper">
+<!--  start intro container -->
+	<div class="intro_content">
+		<div class="layout_left">
+			<p>
+				Hello, I am Eric and welcome to my portfolio. Here I will list projects I have worked on both professionaly and personally. Along with technical overviews, problems faced/solved, how I grew as a web developer, and even some code examples. Please explore this page for work and contact information.
+			</p>
+		</div>
+		<div class="layout_right">
+			<div class="profile_pic" title="profile picure">
+				<!--  profile picture here, check css for source -->
+			</div>
+		</div>
+	</div>
+<!-- end intro container -->
+<!-- start work container -->
+	<div class="work_container">
+		<div class="floating_layout">
+			<h3>Web App Proof of Concept</h3>
+			<p>My very first keystrokes in a professional office were to build a POC that utilized offline storage and web database to run a web app as if it were a native application. The technical overview was to use device storage and to download a small HTML5 application to the home screen of the user, that utilized a JSON to provide data comarisons based on user input. The app was built with jQuery and jQuery Mobile.</p>
+			<p>What this app provided was for sales representative to enter data at a client location and provide price comparisons on the spot. The data was stored for wholesale prices of sixty individual products with different material combinations for three components, allowing for robust search results.</p>
+			<p>Being a mobile web app, it was designed as a One Page Application, navigation was possible by triggereing arrows on the left and right side, as well as using a wizard-stle navigation bar to keep track of which view was active. all page transitions used a sliding animation while building the contents from the result of an AJAX to fetch from meaningful html files.</p>
+			<h5>What I learned</h5>
+			<p>First and foremost, offline storage and web database was brand new to me. What I really took away from this experience was learning the importants of version control. Working with offline storage meant keeping the manifest document as up to date as possible to make sure stale content was not being served.</p>
+			<i>...sample in development</i>
+		</div>
+		<div class="floating_layout">
+			<h3>JSF Mobile Web App</h3>
+			<p>I had an opportunity early on to learn technologies that sit behind the front end of the web platform. In this I was introduced to Spring MVC Framework, Git repository management and some light deployment scripting.</p>
+			<p>The goal of this web app was to bring transaction records to the fingertips of payment managers. This app was heavy with server-side calls to provide the data. We then wrote Java class extensions to format the data in meaningful ways to be delivered to our html.</p>
+			<p>An advantage to using a JSF technology was that the connection to the data was sitting closer to the user html and we were able to reduce the number of server calls in our usage by manipulating the data in real time instead of replacing the content with more server provided information. Targeting mobile devices, we used PrimeFaces as the JSF which provided a strong toolkit of mobile supported widgets and features.</p>
+		</div>
+	</div>
+</div>

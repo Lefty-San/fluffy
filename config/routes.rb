@@ -1,4 +1,5 @@
 Moku::Application.routes.draw do
+  get "portfolio/index"
   get "links/index"
   get "login/index", constraints: {subdomain: 'login'}
   get "aboutme/index"
