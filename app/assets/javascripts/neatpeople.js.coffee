@@ -7,6 +7,8 @@
  * This function is used to size the above the fold content on load and resize to preserve performance. Also to maintian placement amung window sizes
  */
 
+app.neatpeople = function() {
+
 clubSizer = function() {
 	var vPort = $( window ).height();
 	var tSize = $( '.clubTitle' ).height();
@@ -299,6 +301,7 @@ $(document).keydown(function(e) {
 
 });
 
+}
 /*
 
 <!--[if gte IE 8]>

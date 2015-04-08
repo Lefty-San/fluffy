@@ -1,5 +1,4 @@
 Moku::Application.routes.draw do
-  get "portfolio/index"
   get "links/index"
   get "login/index", constraints: {subdomain: 'login'}
   get "aboutme/index"
@@ -9,12 +8,16 @@ Moku::Application.routes.draw do
   get "neatpeople/baracudabomb"
   get "neatpeople/mwac"
   get "welcome/index"
+  get "portfolio/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :links
   resources :aboutme
   resources :articles
   resources :neatpeople
+  resources :login
+  resources :portfolio, path: '/portfolio'
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 

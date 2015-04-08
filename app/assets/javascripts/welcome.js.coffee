@@ -20,4 +20,8 @@ $( window ).resize(function() {
 	heroSizer();
 });
 
+app.home = function() {
+	console.log('home init');
+}
+
 `

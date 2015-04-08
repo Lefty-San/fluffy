@@ -15,10 +15,34 @@
 //= require turbolinks
 //= require_tree .
 
-$('.mobileMenu').click(function() {
-	if ($('table.headerTab').hasClass('reveal')) {
-		$('table.headerTab').removeClass('reveal');
-	} else {
-		$('table.headerTab').addClass('reveal');
-	}
-});
+
+app.init = function() {
+	$('.mobileMenu').click(function() {
+		if ($('table.headerTab').hasClass('reveal')) {
+			$('table.headerTab').removeClass('reveal');
+		} else {
+			$('table.headerTab').addClass('reveal');
+		}
+	});
+
+ /*	var loc = location.pathname,
+	 intent = loc.lastIndexOf("/"),
+	  count = "";
+
+	  if (intent != 0 ) {
+	  	count = countIndex(intent);
+	  	loc = loc.slice(count);
+	  	page = loc;
+	  }
+
+	 var countIndex = function(i) {
+	 	var str = "";
+	 	for (var c = 0 ; c <= i + 1 ; c++ ){
+	 		str += c;
+	 	}
+	 	return str;
+	 } */
+
+}
+
+app.init();
